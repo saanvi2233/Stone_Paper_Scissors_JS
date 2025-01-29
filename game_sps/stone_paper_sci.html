@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="stone_p_sc.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <p>Choose your move:</p>
+    <button onclick="playGame('Rock')"><img src="rock-emoji.png" alt="Rock"></button>
+    <button onclick="playGame('Paper')"><img src="paper-emoji.png" alt="Paper"></button>
+    <button onclick="playGame('Scissors')"><img src="scissors-emoji.png" alt="Scissors"></button>
+
+    <p class="js-result result">You Win.</p>
+    <p class="js-moves"> You
+        <img src="rock-emoji.png" class="move-icon">
+       <img src="scissors-emoji.png" class="move-icon">
+       <!-- <img src="paper-emoji.png" class="move-icon"> -->
+   computer</p>
+
+    <p class="js-score score"></p>
+
+    <button onclick="
+        score = { win: 0, loses: 0, ties: 0 };
+        localStorage.setItem('score', JSON.stringify(score));
+        alert('Score has been reset.');
+        updatescore();
+    " class="reset-score-button">Reset Score</button>
+
+    <script src="stone_p_sc.js">
+       
+    </script>
+</body>
+</html>
