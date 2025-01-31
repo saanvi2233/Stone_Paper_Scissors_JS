@@ -42,3 +42,24 @@ let score = JSON.parse(localStorage.getItem('score')) || { win: 0, loses: 0, tie
             if (randomNumber < 2 / 3) return 'Paper';
             return 'Scissors';
         }
+
+        let isAutoPlay = false;
+        let intervalId;
+
+        function autoplay(){
+            if(!isAutoPlay){
+             intervalId=   setInterval(function(){
+                    const playermove=pickComputerMove();
+                    playGame(playermove);
+    
+                },1000);
+                isAutoPlay=true;
+            }
+            else{
+                clearInterval(intervalId);
+                isAutoPlay=false;
+            }
+            
+        //    to stop auto play click again the button
+
+        }
